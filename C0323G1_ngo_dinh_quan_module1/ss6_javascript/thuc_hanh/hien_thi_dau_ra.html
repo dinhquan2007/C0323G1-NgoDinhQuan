@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="showMessage();">Click Me</button>
+<div id="messageDiv"></div>
+<button type="button" onclick="showMeg();">Click me</button>
+<button type="button" onclick="showText();">Click me</button>
+<button type="button" onclick="showMuti();">Click me</button>
+<script>
+    function showMessage() {
+        alert('hello!');
+    }
+
+    function showMeg() {
+        document.getElementById('messageDiv').innerHTML = 'chao xìn';
+    }
+
+    function showText() {
+        document.write('hello world')
+    }
+
+    function showMuti() {
+        console.log('bong dua')
+    }
+</script>
+</body>
+
+</html>
