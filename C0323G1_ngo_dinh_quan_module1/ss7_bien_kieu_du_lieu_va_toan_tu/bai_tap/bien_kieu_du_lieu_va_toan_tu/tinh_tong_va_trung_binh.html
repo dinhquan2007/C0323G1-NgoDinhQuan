@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>point_nhiet_do_chu_vi_dien_tich</title>
+</head>
+<body>
+<form>
+    <h2>tính điểm trung bình</h2>
+    <p>point physical<label><input name="physical" type="number" id="num1"/></label></p><br/>
+    <p>point chemistry<label><input name="chemistry" type="number" id="num2"/></label></p><br/>
+    <p>point biology<label><input name="biology" type="number" id="num3"/></label></p><br/>
+    <div id="mediumscore"></div>
+    <button type="button" name="mediumscore" onclick="getValue()">Trung bình</button>
+    <div id="sum"></div>
+    <button type="button" name="sum" onclick="getValue2()">Tổng</button>
+</form>
+</body>
+<script>
+    function getValue() {
+        let a = +document.getElementById("num1").value;
+        let b = +document.getElementById("num2").value;
+        let c = +document.getElementById("num3").value;
+        let mediumscore = (a + b + c) / 3;
+        document.getElementById('mediumscore').innerHTML = mediumscore;
+    }
+
+    function getValue2() {
+        let a = +document.getElementById("num1").value;
+        let b = +document.getElementById("num2").value;
+        let c = +document.getElementById("num3").value;
+        let d = a + b + c;
+        document.getElementById("sum").innerHTML = d;
+    }
+</script>
+</html>
