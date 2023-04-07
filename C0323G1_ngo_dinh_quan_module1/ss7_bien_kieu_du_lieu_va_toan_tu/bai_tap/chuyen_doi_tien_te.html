@@ -8,6 +8,7 @@
 <body>
 <form>
     <table>
+        <tbody>
         <tr>
             <th>Amount</th>
             <th>From Currency</th>
@@ -15,13 +16,45 @@
             <th></th>
         </tr>
         <tr>
-            <td><input type="text" name="">></td>
-            <td></td>
-            <td></td>
+            <td><input type="text" name="money" id="number" value=""></td>
+            <td><select name="form" id="form">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+            </td>
+            <td>
+                <select name="to" id="to">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" onclick="ChangeMoney()">Convert</button>
+            </td>
         </tr>
+        </tbody>
     </table>
+    <h2>Resut</h2>
+    <div id="result"></div>
 </form>
-
-
 </body>
+<script>
+    function ChangeMoney(){
+        let money = document.getElementById("number").value;
+        let from = document.getElementById("form").value;
+        let to = document.getElementById("to").value;
+        if (from ==="VND"){
+            if (to=== "USD"){
+                money = money/23000
+            }else {money =money}
+        }else {
+            if (to === "VND"){
+                money =money*23000
+            }else {
+                money = money
+            }
+        }
+        document.getElementById("result").innerText= money;
+    }
+</script>
 </html>
