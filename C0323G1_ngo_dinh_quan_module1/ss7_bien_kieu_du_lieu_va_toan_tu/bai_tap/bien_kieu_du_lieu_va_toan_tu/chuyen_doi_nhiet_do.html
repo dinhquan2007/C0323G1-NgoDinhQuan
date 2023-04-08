@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<input type="text" id="doC">Độ C</input>
+<button type="button" id="Convert" onclick="convert()">Convert</button>
+<h2>Result</h2>
+<div id="doF">đây là kết quả</div>
+</body>
+<script>
+    function convert() {
+        let doC = +document.getElementById("doC").value;
+        let doF = Number(doC * 9 / 5 + 32);
+        document.getElementById("doF").innerHTML = doF + "độ F";
+    }
+</script>
+</html>
