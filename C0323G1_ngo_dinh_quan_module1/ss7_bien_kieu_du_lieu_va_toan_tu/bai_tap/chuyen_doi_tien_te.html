@@ -29,7 +29,7 @@
                 </select>
             </td>
             <td>
-                <button type="button" onclick="ChangeMoney()">Convert</button>
+                <button type="button" onclick="changeMoney()">Convert</button>
             </td>
         </tr>
         </tbody>
@@ -39,19 +39,19 @@
 </form>
 </body>
 <script>
-    function ChangeMoney(){
+    function changeMoney(){
         let money = document.getElementById("number").value;
         let from = document.getElementById("form").value;
         let to = document.getElementById("to").value;
         if (from ==="VND"){
             if (to=== "USD"){
-                money = money/23000
+                money = money/23000;
             }else {money =money}
         }else {
             if (to === "VND"){
-                money =money*23000
+                money =money*23000;
             }else {
-                money = money
+                money = money;
             }
         }
         document.getElementById("result").innerText= money;
