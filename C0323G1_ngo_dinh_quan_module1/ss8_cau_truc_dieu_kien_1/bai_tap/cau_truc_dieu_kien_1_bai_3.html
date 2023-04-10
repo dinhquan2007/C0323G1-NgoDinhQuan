@@ -18,11 +18,14 @@
 <script>
     function getValue(){
         let number = document.getElementById("number").value;
-        if (number > 0){
-            document.getElementById("result").innerHTML= number +"là số dương";
+        if(number%1 !==0){
+            document.getElementById("result").innerHTML= "undertifine";
+        }
+        else if (number > 0){
+            document.getElementById("result").innerHTML= number +"là số nguyên dương";
         }
         else {
-            document.getElementById("result").innerHTML = number + "là số âm";
+            document.getElementById("result").innerHTML = number + "là số nguyên âm";
         }
     }
 </script>
