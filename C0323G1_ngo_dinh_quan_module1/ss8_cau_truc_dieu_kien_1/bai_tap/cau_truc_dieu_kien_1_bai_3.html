@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so_sanh_voi_0</title>
+</head>
+<body>
+<form>
+<div>
+    <label>input number<input type="number" id="number"></label>
+    <input type="button" name="test" onclick="getValue()" value="kiem tra">
+</div>
+<div id="result">
+    <p>Result</p>
+</div>
+</form>
+</body>
+<script>
+    function getValue(){
+        let number = document.getElementById("number").value;
+        if (number > 0){
+            document.getElementById("result").innerHTML= number +"là số dương";
+        }
+        else {
+            document.getElementById("result").innerHTML = number + "là số âm";
+        }
+    }
+</script>
+</html>
