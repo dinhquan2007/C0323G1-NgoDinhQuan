@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h2>kiểm tra a chia hết cho b</h2>
+    <p>Nhập vào giá trị của a<input type="text" id="a"></p>
+    <p>Nhập vào giá trị của b<input type="text" id="b"></p>
+    <input type="button" value="kiểm tra" onclick="getValue()">
+</div>
+<div id="result">
+ kết quả
+</div>
+</body>
+<script>
+    function getValue() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        if (b === 0) {
+            document.getElementById("result").innerHTML = "undertifine";
+        } else if (!(a % b)) {
+            document.getElementById("result").innerHTML = a + "chia hết cho" + b;
+        } else {
+            document.getElementById("result").innerHTML = a + "không chia hết cho" + b;
+
+        }
+
+    }
+</script>
+</html>

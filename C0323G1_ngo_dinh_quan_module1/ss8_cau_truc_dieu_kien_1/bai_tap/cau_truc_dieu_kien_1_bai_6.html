@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính Hoa Hồng</title>
+</head>
+<body>
+<form>
+    <h1>Tính lợi nhuận nhận được theo tháng</h1>
+    <div>
+        <label>Doanh thu tháng này<input type="number" id="money">VND</label>
+        <button type="button" onclick="changeMoney()">Kiểm Tra</button>
+    </div>
+    <div>
+        <label>
+            lợi nhuận nhận được là:
+        </label>
+        <label id="result">VND</label>
+    </div>
+</form>
+</body>
+<script>
+    function changeMoney() {
+        let sumMoney = +document.getElementById("money").value;
+        if (sumMoney < 2000000) {
+            let profit = sumMoney * 7 / 100;
+            document.getElementById("result").innerHTML = profit;
+        } else if (sumMoney < 4000000) {
+            let profit = sumMoney * 10 / 100;
+            document.getElementById("result").innerHTML = profit;
+        } else {
+            let profit = sumMoney * 15 / 100;
+            document.getElementById("result").innerHTML = profit;
+        }
+    }
+</script>
+</html>

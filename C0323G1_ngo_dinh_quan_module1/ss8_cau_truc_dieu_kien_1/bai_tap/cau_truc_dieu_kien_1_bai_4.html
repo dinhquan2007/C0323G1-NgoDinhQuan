@@ -10,7 +10,7 @@
       <label>nhập số thứ 1<input type="number" id="number1"></label><br>
       <label>nhập số thứ 2<input type="number" id="number2" ></label><br>
       <label>nhập số thứ 3<input type="number" id="number3"></label><br>
-      <label><input type="button" onclick="text()" value="kiemtra"></label>
+      <label><input type="button" onclick="findMax()" value="kiemtra"></label>
     </div>
     <div id="result">
 <h3>Result</h3>
@@ -18,7 +18,7 @@
 </form>
 </body>
 <script>
-    function text(){
+    function findMax(){
         let number1 =+document.getElementById("number1").value;
         let number2= +document.getElementById("number2").value;
         let number3= +document.getElementById("number3").value;

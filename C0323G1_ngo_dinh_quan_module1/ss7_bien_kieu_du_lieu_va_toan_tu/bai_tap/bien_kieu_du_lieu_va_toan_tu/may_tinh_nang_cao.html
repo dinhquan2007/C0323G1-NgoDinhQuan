@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+    <style>
+        body {
+            margin: 25px;
+        }
+
+        .caculator {
+            background: lightslategray;
+            width: 375px;
+            height: 200px;
+            padding: 10px;
+        }
+
+        form .button {
+            text-align: center;
+            padding: 20px 0 0 0;
+        }
+
+        .button input[type="button"] {
+            height: 30px;
+            width: 50px;
+        }
+
+        form .result input[type="text"] {
+            width: 368px;
+            height: 25px;
+            text-align: right;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="caculator">
+    <form action="#" name="form">
+        <div class="result">
+            <input type="text" name="disp" id="disp" placeholder="0">
+        </div>
+        <div class="button">
+            <div class="row">
+                <input type="button" value="Rad" name="VRad" onclick="val(VRad.value)">
+                <input type="button" value="  " name="V" onclick="val(V.value)">
+                <input type="button" value="x!" name="Vxgth" onclick="val(Vxgth.value)">
+                <input type="button" value="(" name="Vng" onclick="val(Vng.value)">
+                <input type="button" value=")" name="Vng2" onclick="val(Vng2.value)">
+                <input type="button" value="%" name="Vpt" onclick="val(Vpt.value)">
+                <input type="button" value="AC" name="VAC" onclick="val(VAC.value)">
+            </div>
+            <div class="row">
+                <input type="button" value="lnv" name="Vlnv" onclick="val(Vlnv.value)">
+                <input type="button" value="sin" name="Vsin" onclick="val(Vsin.value)">
+                <input type="button" value="ln" name="Vln" onclick="val(Vln.value)">
+                <input type="button" value="7" name="V7" onclick="val(V7.value)">
+                <input type="button" value="8" name="V8" onclick="val(V8.value)">
+                <input type="button" value="9" name="V9" onclick="val(V9.value)">
+                <input type="button" value="/" name="Vchia" onclick="val(Vchia.value)">
+            </div>
+            <div class="row">
+                <input type="button" value="PI" name="VPI" onclick="val(VPI.value)">
+                <input type="button" value="cos" name="Vcos" onclick="val(Vcos.value)">
+                <input type="button" value="log" name="Vlog" onclick="val(Vlog.value)">
+                <input type="button" value="4" name="V4" onclick="val(V4.value)">
+                <input type="button" value="5" name="V5" onclick="val(V5.value)">
+                <input type="button" value="6" name="V6" onclick="val(V6.value)">
+                <input type="button" value="*" name="Vx" onclick="val(Vx.value)">
+            </div>
+            <div class="row">
+                <input type="button" value="e" name="Ve" onclick="val(Ve.value)">
+                <input type="button" value="tan" name="Vtan" onclick="val(Vtan.value)">
+                <input type="button" value="squa" name="Vsqua" onclick="val(Vsqua.value)">
+                <input type="button" value="1" name="V1" onclick="val(V1.value)">
+                <input type="button" value="2" name="V2" onclick="val(V2.value)">
+                <input type="button" value="3" name="V3" onclick="val(V3.value)">
+                <input type="button" value="-" name="Vsub" onclick="val(Vsub.value)">
+            </div>
+            <div class="row">
+                <input type="button" value="Ans" name="VAns" onclick="val(VAns.value)">
+                <input type="button" value="EXP" name="VEXP" onclick="val(VEXP.value)">
+                <input type="button" value="^" name="^" onclick="val()">
+                <input type="button" value="0" name="V0" onclick="val()">
+                <input type="button" value="." name="V." onclick="val()">
+                <input style="background: cornflowerblue;color: #dddddd" type="button" value="=" name="V="
+                       onclick="caculator()" id="V=">
+                <input type="button" value="+" name="V+" onclick="val()">
+            </div>
+
+        </div>
+    </form>
+
+</div>
+</body>
+</html>
