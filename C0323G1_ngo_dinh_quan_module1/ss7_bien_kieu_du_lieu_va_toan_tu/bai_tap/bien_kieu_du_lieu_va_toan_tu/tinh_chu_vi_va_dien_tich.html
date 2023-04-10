@@ -7,23 +7,23 @@
 <body>
 <h1>Tính chu vi và diện tích hình tròn</h1>
 <p>bán kính<label><input id="radius" name="radius" type="number"></label></p>
-<button name="chuvi" type="button" onclick="chuvi()">Chu Vi</button>
+<button name="chuvi" type="button" onclick="tinhChuVi()">Chu Vi</button>
 <div id="chuvi"></div>
 <div id="dientich"></div>
-<button name="dientich" type="button" onclick="dientich()">Diện Tích</button>
+<button name="dientich" type="button" onclick="tinhDienTich()">Diện Tích</button>
 </body>
 <script>
-    function chuvi() {
+    function tinhChuVi() {
         let r = +document.getElementById("radius").value;
         const PI=3.14;
-        let p = PI*2*r;
-        document.getElementById("chuvi").innerHTML = p;
+        let ChuVi = PI*2*r;
+        document.getElementById("chuvi").innerHTML = ChuVi;
     }
-    function dientich(){
+    function tinhDienTich(){
         let r=+document.getElementById("radius").value;
         const PI =3.14;
-        let s =r*r*PI;
-        document.getElementById("dientich").innerHTML=s;
+        let DienTich =r*r*PI;
+        document.getElementById("dientich").innerHTML=DienTich;
     }
 </script>
 </html>
