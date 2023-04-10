@@ -7,9 +7,9 @@
 <body>
 <form>
     <div>
-        <label>Điểm kiểm tra<input type="number" name="diemKiemTra" id="diemKiemTra"></label><br>
-        <label>Điểm giữa kì<input type="number" name="diemGiuaKi" id="diemGiuaKi"></label><br>
-        <label>Điểm cuối kì<input type="number" name="diemCuoiKi" id="diemCuoiKi"></label><br>
+        <label>Điểm kiểm tra<input type="number" name="diemKiemTra" id="diemKiemTra" min="0" max="10"></label><br>
+        <label>Điểm giữa kì<input type="number" name="diemGiuaKi" id="diemGiuaKi" min="0" max="10"></label><br>
+        <label>Điểm cuối kì<input type="number" name="diemCuoiKi" id="diemCuoiKi" min="0" max="10"></label><br>
         <button type="button" onclick="result()">Kiểm Tra</button>
     </div>
     <div id="result">
