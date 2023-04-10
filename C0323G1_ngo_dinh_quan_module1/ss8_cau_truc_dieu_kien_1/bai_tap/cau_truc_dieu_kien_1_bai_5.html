@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xếp loại điểm</title>
+</head>
+<body>
+<form>
+    <div>
+        <label>Điểm kiểm tra<input type="number" name="diemKiemTra" id="diemKiemTra"></label><br>
+        <label>Điểm giữa kì<input type="number" name="diemGiuaKi" id="diemGiuaKi"></label><br>
+        <label>Điểm cuối kì<input type="number" name="diemCuoiKi" id="diemCuoiKi"></label><br>
+        <button type="button" onclick="result()">Kiểm Tra</button>
+    </div>
+    <div id="result">
+        <h2>Xếp loại</h2>
+    </div>
+</form>
+</body>
+<script>
+    function result(){
+        let heSo1 =+document.getElementById("diemKiemTra").value;
+        let heSo2 =+document.getElementById("diemGiuaKi").value;
+        let heSo3 =+document.getElementById("diemCuoiKi").value;
+        let diemTrungBinh= (heSo1+heSo2*2+heSo3*3)/6;
+        if(diemTrungBinh<5){
+            document.getElementById("result").innerHTML="Điểm trung bình là " + diemTrungBinh +"Bạn xếp loại Yếu";
+        }else if(diemTrungBinh<6.5){
+            document.getElementById("result").innerHTML="Điểm trung bình là "+diemTrungBinh+"Bạn xếp loại Trung Bình";
+        }
+        else if (diemTrungBinh<8){
+            document.getElementById("result").innerHTML="Điểm trung bình là "+diemTrungBinh+ "Bạn xếp loại Khá";
+        }
+        else {
+            document.getElementById("result").innerHTML="Điểm trung bình là "+diemTrungBinh+"Bạn xếp lại Giỏi";
+        }
+    }
+</script>
+</html>
