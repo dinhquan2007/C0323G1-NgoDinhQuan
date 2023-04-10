@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xét tuổi vào lớp 10</title>
+</head>
+<body>
+<div>
+    <p>Nhập vào số tuổi <input type="text" id="age"></p>
+    <input type="button" onclick="getValue()" value="Kiểm tra">
+</div>
+<div id="result">
+    <h2>kết quả</h2>
+</div>
+</body>
+<script>
+    function getValue(){
+        let age = document.getElementById("age").value;
+        if (age>=15){
+            document.getElementById("result").innerHTML = "bạn đã đủ tuổi vào lớp 10"
+        }
+        else {
+            document.getElementById("result").innerHTML = "bạn chưa đủ tuổi vào lớp 10"
+        }
+    }
+</script>
+</html>
