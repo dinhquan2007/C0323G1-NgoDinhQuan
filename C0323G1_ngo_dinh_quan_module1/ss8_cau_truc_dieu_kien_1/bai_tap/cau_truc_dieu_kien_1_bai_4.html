@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>max</title>
+</head>
+<body>
+<form>
+    <div>
+      <label>nhập số thứ 1<input type="number" id="number1"></label><br>
+      <label>nhập số thứ 2<input type="number" id="number2" ></label><br>
+      <label>nhập số thứ 3<input type="number" id="number3"></label><br>
+      <label><input type="button" onclick="text()" value="kiemtra"></label>
+    </div>
+    <div id="result">
+<h3>Result</h3>
+    </div>
+</form>
+</body>
+<script>
+    function text(){
+        let number1 =+document.getElementById("number1").value;
+        let number2= +document.getElementById("number2").value;
+        let number3= +document.getElementById("number3").value;
+
+        if (number1%1!==0 | number2%1!==0 || number3%1!==0){
+            document.getElementById("result").innerHTML="phải nhập số nguyên";
+        }
+        else {
+            if (number1 > number2 && number1 > number3) {
+                document.getElementById("result").innerHTML = number1 +"là số lớn nhất";
+            }
+            else if (number2>number3) {
+                document.getElementById("result").innerHTML =number2 +"là số lớn nhất";
+            }
+            else {
+                document.getElementById("result").innerHTML = number3+"là số lớn nhất";
+            }
+        }
+    }
+</script>
+</html>
