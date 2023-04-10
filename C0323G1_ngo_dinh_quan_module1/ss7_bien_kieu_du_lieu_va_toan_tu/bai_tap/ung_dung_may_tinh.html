@@ -16,6 +16,12 @@
             <td>
                 <button type="button" name="trừ" id="sup" onclick="Sup()">Trừ</button>
             </td>
+            <td>
+                <button type="button" name="nhân" id="mul" onclick="Mul()">Nhân</button>
+            </td>
+            <td>
+                <button type="button" name="chia" id="div" onclick="Div()">Chia</button>
+            </td>
         </tr>
     </table>
     <h3>Result:</h3>
@@ -28,12 +34,27 @@
         let number2 = document.getElementById("num2").value;
         let result = Number(number1) + Number(number2);
         document.getElementById("result").innerHTML = result;
-            }
+    }
+
     function Sup() {
         let number1 = document.getElementById("num1").value;
         let number2 = document.getElementById("num2").value;
-        let result2 = Number(number1)-Number(number2);
+        let result2 = Number(number1) - Number(number2);
         document.getElementById("result").innerHTML = result2;
+    }
+
+    function Mul() {
+        let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+        let result3 = Number(number1) * Number(number2);
+        document.getElementById("result").innerHTML = result3;
+    }
+
+    function Div() {
+        let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+        let result4 = Number(number1) / Number(number2);
+        document.getElementById("result").innerHTML = result4;
     }
 </script>
 </html>
