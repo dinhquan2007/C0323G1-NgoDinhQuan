@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Diện Tích hình vuông khi biết cạnh a</title>
+</head>
+<body>
+<div>
+    <label>
+        Nhập vào giá trị cạnh hình vuông
+        <input type="text" id="edge">
+    </label>
+    <button type="button" onclick="changeAcreage()">Tính diện tích</button>
+</div>
+<div>
+    <label>Diện tích của hình vuông là</label>
+    <h1 id="result">Result</h1>
+</div>
+</body>
+<script>
+    function changeAcreage(){
+        let edge = +document.getElementById("edge").value;
+        let acreage = edge *edge;
+        document.getElementById("result").innerHTML = acreage ;
+    }
+</script>
+</html>

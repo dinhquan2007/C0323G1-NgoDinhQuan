@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra ba cạnh của tam giác</title>
+</head>
+<body>
+<h2>nhập vào 3 cạnh a,b,c của tam giác cần kiểm tra</h2>
+<div>
+    <label>Nhập vào cạnh a<input type="number" id="edge1"></label><br>
+    <label>Nhập vào cạnh b<input type="number" id="edge2"></label><br>
+    <label>Nhập vào cạnh c<input type="number" id="edge3"></label><br>
+</div>
+<button type="button" onclick="getEdge()">kiểm tra</button>
+<p id="result">kết quả</p>
+
+</body>
+<script>
+    function getEdge() {
+        let a = +document.getElementById("edge1").value;
+        let b = +document.getElementById("edge2").value;
+        let c = +document.getElementById("edge3").value;
+        let ac = a + c;
+        let ab = a + b;
+        let bc = b + c;
+        if ((a > 0 )&& (b > 0 )&& (c > 0) && (ac > b) &&( ab > c) && (bc > a)) {
+                document.getElementById("result").innerHTML ="đây là 3 cạnh của một tam giác";
+        }else {
+            document.getElementById("result").innerHTML = "đây không phải là 3 cạnh của một tam giác";
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính diện tích hình chữ nhật khi biết hai cạnh</title>
+</head>
+<body>
+<form>
+    <h2>Tính diện tích hình chữ nhật</h2>
+    <div>
+        <label> Nhập cạnh thứ nhất
+            <input type="number" id="edge1">
+        </label><br>
+        <label>Nhập cạnh thứ hai
+            <input type="number" id="edge2">
+        </label>
+    </div>
+    <div>
+        <button type="button" onclick="changeAcreage()">tính diện tích</button>
+    </div>
+
+    <div>
+        <h2>diện tích là:</h2>
+        <h2 id="result">Result</h2>
+    </div>
+</form>
+</body>
+<script>
+    function changeAcreage() {
+        let edge1 = +document.getElementById("edge1").value;
+        let edge2 = +document.getElementById("edge2").value;
+        if (edge1 <= 0 || edge2 <= 0) {
+            document.getElementById("result").innerHTML = "untiderfind"
+        } else {
+            let area = edge1 * edge2;
+            document.getElementById("result").innerHTML = area;
+        }
+    }
+</script>
+</html>

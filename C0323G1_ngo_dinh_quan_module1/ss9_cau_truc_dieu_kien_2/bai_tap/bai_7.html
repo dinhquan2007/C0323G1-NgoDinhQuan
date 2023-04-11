@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giải phương trình bậc hai</title>
+</head>
+<body>
+<h2>Giải phương trình bậc hai dạng ax<sup>2</sup>+bx+c=0</h2>
+<div>
+    <label>Nhập a<br><input type="number" id="numA"></label><br>
+    <label>Nhập b<br><input type="number" id="numB"></label><br>
+    <label>Nhập c<br><input type="number" id="numC"></label><br>
+    <button type="button" onclick="findX()">Giải Phương Trình</button>
+</div>
+<p>phương trình</p>
+<p id="result">có nghiệm ở đây</p>
+</body>
+<script>
+    function findX() {
+        let a = document.getElementById("numA").value;
+        let b = document.getElementById("numB").value;
+        let c = document.getElementById("numC").value;
+        let delta = b * b - (4 * a * c);
+        let doubleX = -b/2/a;
+        let x1 = (-b+Math.sqrt(delta))/2/a;
+        let x2 = (-b-Math.sqrt(delta))/2/a;
+        if (delta < 0) {
+            document.getElementById("result").innerHTML= "vô nghiệm";
+        } else if (delta === 0){
+document.getElementById("result").innerHTML = "có nghiệm kép là:"+doubleX;
+        }else {
+            document.getElementById("result").innerHTML = "có hai nghiệm là"+x1 +"và"+ x2;
+        }
+    }
+</script>
+</html>

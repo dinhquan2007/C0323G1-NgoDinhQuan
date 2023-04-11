@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính tiền điện</title>
+</head>
+<body>
+<div>
+    <label>Nhập vào số kWh tháng này<input type="number" id="kwh">kWh</label>
+</div>
+<button type="button" onclick="getKwh()">tính tiền điện</button>
+<div>
+    <p>Tiền điện tháng này là:</p>
+    <p id="result"></p>
+</div>
+</body>
+<script>
+    function getKwh() {
+        let kWh = +document.getElementById("kwh").value;
+        const lv1 = 2000;
+        const lv2 = 2500;
+        const lv3 = 3000;
+        let tienDienLv1 = kWh * lv1;
+        let tienDienLv2 = tienDienLv1 + (kWh - 50) * lv2;
+        let tienDienLv3 = tienDienLv2 + (kWh - 100) * lv3
+        if (kWh < 50) {
+            document.getElementById("result").innerHTML = tienDienLv1;
+        } else if (kWh < 100) {
+            document.getElementById("result").innerHTML = tienDienLv2;
+        }else {
+            document.getElementById("result").innerHTML = tienDienLv3;
+        }
+    }
+</script>
+</html>

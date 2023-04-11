@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra tuổi</title>
+</head>
+<body>
+<div>
+    <label>Nhập vào số tuổi của bạn<input type="number" id="age"></label>
+    <button onclick="getAge()">kiem tra</button>
+</div>
+<div id="result">
+</div>
+</body>
+<script>
+    function getAge() {
+        let age = document.getElementById("age").value;
+        if(age % 1===0 && (age<120)&&(age>0)){
+            document.getElementById("result").innerHTML = "đây là tuổi của một người";
+        }else {
+            document.getElementById("result").innerHTML = "đây không phải là tuổi của một người";
+        }
+
+    }
+</script>
+</html>

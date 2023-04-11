@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lãi suất nhân hàng</title>
+</head>
+<body>
+<div>
+    <label>Nhập vào tiền gốc tính lãi kép<br><input type="number" id="money"></label><br>
+    <label>Nhập vào lãi mỗi tháng (%)<br><input type="number" id="interest"></label><br>
+    <label>NHập vào thời hạn gửi<br><input type="number" id="month"></label><br>
+</div>
+<button type="button" onclick="changeMoney()">kiểm tra</button>
+<p>lãi nhận được là</p>
+<p id="result"></p>
+</body>
+<script>
+    function changeMoney(){
+        let money= document.getElementById("money").value;
+        let interest = document.getElementById("interest").value;
+        let month=document.getElementById("month").value;
+        document.getElementById("result").innerHTML = money * Math.pow(1+interest/100,month)-money;
+    }
+</script>
+</html>

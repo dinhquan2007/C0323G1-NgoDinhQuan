@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích tam giác vuông khi biết 2 cạnh kề</title>
+</head>
+<body>
+<div>
+    <div>
+        <label>Nhập vào cạnh kề thứ nhất
+            <input type="number" id="edge1">
+        </label><br>
+        <label>Nhập vào cạnh kề thứ hai
+            <input type="number" id="edge2">
+        </label><br>
+        <button type="button" onclick="changeAcreage()">Tính diện tích</button>
+    </div>
+    <div><h3>Diện tích của tam giác là :</h3>
+        <h3 id="result">result</h3>
+    </div>
+</div>
+</body>
+<script>
+    function changeAcreage() {
+        let edge1 = +document.getElementById("edge1").value;
+        let edge2 = +document.getElementById("edge2").value;
+        let acreage = edge1 * edge2 / 2 ;
+        if (edge1 <= 0 || edge2 <= 0) {
+            document.getElementById("result").innerHTML = "undertifine"
+        } else {
+            document.getElementById("result").innerHTML = acreage ;
+        }
+    }
+</script>
+</html>
