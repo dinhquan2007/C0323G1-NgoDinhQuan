@@ -5,6 +5,20 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let n = +prompt("nhập vào số lượng")
+    let x1 = 0, x2 = 1;
+    count = 1;
+    let sum = 0;
+    do {
+        let x3 = x1 + x2;
+        x1 = x2;
+        x2 = x3;
+        sum =sum + x1;
+        count++
+    }
+    while (count < n)
+    document.write(sum);
+</script>
 </body>
 </html>

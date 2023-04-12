@@ -7,11 +7,17 @@
 <body>
 <script>
     document.write("0<br/>")
-    let n =+prompt("nhập vào số lượng")
-    let x1=0,x2=1
-    for (let count=1;count<n;count++){
-
+    let n = +prompt("nhập vào số lượng")
+    let x1 = 0, x2 = 1;
+    count=1
+    do {
+        let x3 = x1 + x2;
+        x1 = x2;
+        x2 = x3;
+        count++
+        document.write(x3+"<br>")
     }
+    while (count < n)
 </script>
 </body>
 </html>
