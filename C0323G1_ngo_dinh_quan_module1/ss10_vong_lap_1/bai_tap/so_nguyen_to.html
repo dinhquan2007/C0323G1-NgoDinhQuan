@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so nguyen to</title>
+</head>
+<body>
+<script>
+
+    let n = +prompt("nhập vào số lượng SNT");
+    let count = 0
+    let N = 2
+    while (count < n) {
+        let count2 = 0
+        for (let i = 1; i < N; i++) {
+            if (N % i === 0) {
+                count2++
+            }
+        }
+        if (count2 === 1) {
+            document.write(N + ",");
+            count++;
+        }
+        N++;
+    }
+</script>
+</body>
+</html>
