@@ -6,11 +6,11 @@
 </head>
 <body>
 <div>
-<h3>cho dạng phương trình ax+b=0</h3>
+    <h3>cho dạng phương trình ax+b=0</h3>
     <h4>Nhập a và b để tìm x</h4>
-<label>nhập a
-    <input type="number" id="numA">
-</label><br>
+    <label>nhập a
+        <input type="number" id="numA">
+    </label><br>
     <label>nhập b
         <input type="number" id="numB">
     </label>
@@ -22,17 +22,17 @@
 
 </body>
 <script>
-function findX(){
-    let a= +document.getElementById("numA").value;
-    let b = +document.getElementById("numB").value;
-    if (a===0){
-        document.getElementById("result").innerHTML= "phương trình vô nghiệm";
-    }else if (b===0){
- document.getElementById("result").innerHTML= "phương trình có vô số nghiệm";
-    } else {
-        let x = (-b)/a;
-        document.getElementById("result").innerHTML = x;
+    function findX() {
+        let a = +document.getElementById("numA").value;
+        let b = +document.getElementById("numB").value;
+        if (a === 0) {
+            document.getElementById("result").innerHTML = "phương trình vô nghiệm";
+        } else if (b === 0) {
+            document.getElementById("result").innerHTML = "phương trình có vô số nghiệm";
+        } else {
+            let x = (-b) / a;
+            document.getElementById("result").innerHTML = x;
+        }
     }
-}
 </script>
 </html>

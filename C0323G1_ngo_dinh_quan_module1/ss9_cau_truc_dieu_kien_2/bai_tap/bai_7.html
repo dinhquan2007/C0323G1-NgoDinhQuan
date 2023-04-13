@@ -21,15 +21,15 @@
         let b = document.getElementById("numB").value;
         let c = document.getElementById("numC").value;
         let delta = b * b - (4 * a * c);
-        let doubleX = -b/2/a;
-        let x1 = (-b+Math.sqrt(delta))/2/a;
-        let x2 = (-b-Math.sqrt(delta))/2/a;
+        let doubleX = -b / 2 / a;
+        let x1 = (-b + Math.sqrt(delta)) / 2 / a;
+        let x2 = (-b - Math.sqrt(delta)) / 2 / a;
         if (delta < 0) {
-            document.getElementById("result").innerHTML= "vô nghiệm";
-        } else if (delta === 0){
-document.getElementById("result").innerHTML = "có nghiệm kép là:"+doubleX;
-        }else {
-            document.getElementById("result").innerHTML = "có hai nghiệm là"+x1 +"và"+ x2;
+            document.getElementById("result").innerHTML = "vô nghiệm";
+        } else if (delta === 0) {
+            document.getElementById("result").innerHTML = "có nghiệm kép là:" + doubleX;
+        } else {
+            document.getElementById("result").innerHTML = "có hai nghiệm là" + x1 + "và" + x2;
         }
     }
 </script>

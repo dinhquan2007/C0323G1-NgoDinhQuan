@@ -15,11 +15,11 @@
 <p id="result"></p>
 </body>
 <script>
-    function changeMoney(){
-        let money= document.getElementById("money").value;
+    function changeMoney() {
+        let money = document.getElementById("money").value;
         let interest = document.getElementById("interest").value;
-        let month=document.getElementById("month").value;
-        document.getElementById("result").innerHTML = money * Math.pow(1+interest/100,month)-money;
+        let month = document.getElementById("month").value;
+        document.getElementById("result").innerHTML = money * Math.pow(1 + interest / 100, month) - money;
     }
 </script>
 </html>
