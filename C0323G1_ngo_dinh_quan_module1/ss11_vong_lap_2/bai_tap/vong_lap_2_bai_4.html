@@ -8,22 +8,32 @@
 <script>
     let d = +prompt("nhập vào chiều ngang");
     let r = +prompt("nhập vào chiều rộng");
-    for (let j = 1; j <= r; j++) {
-        if (j === 1 || j === r) {
-            for (let i = 1; i <= d; i++) {
+    // for (let j = 1; j <= r; j++) {
+    //     if (j === 1 || j === r) {
+    //         for (let i = 1; i <= d; i++) {
+    //             document.write("*");
+    //         }
+    //         document.write("<br>");
+    //     } else {
+    //         for (let i = 1; i <= d; i++) {
+    //             if (i === 1 || i === d) {
+    //                 document.write("*");
+    //             } else {
+    //                 document.write("&nbsp&nbsp");
+    //             }
+    //         }
+    //         document.write("<br>");
+    //     }
+    // }
+    for (let i = 0; i <= r; i++) {
+        for (let j = 0; j <= d; j++) {
+            if (i === 0 || i === r || j === 0 || j === d) {
                 document.write("*");
+            } else {
+                document.write("&nbsp&nbsp");
             }
-            document.write("<br>");
-        } else {
-            for (let i = 1; i <= d; i++) {
-                if (i === 1 || i === d) {
-                    document.write("*");
-                } else {
-                    document.write("&nbsp&nbsp");
-                }
-            }
-            document.write("<br>");
         }
+        document.write("<br>");
     }
 
 
