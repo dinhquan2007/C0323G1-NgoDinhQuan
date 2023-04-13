@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa</title>
+</head>
+<body>
+<script>
+    let out = " ";
+    for (let i = 0; i < 5; i++) {
+
+        out = out + "*";
+        document.write(out + "<br>");
+    }
+    document.write("<br>");
+    for (let i = 0; i < 5; i++) {
+        let out = "";
+        for (let j = 0; j < 5 - i; j++) {
+            out = out + "*";
+        }
+        document.write(out + "<br>");
+    }
+    for (let i = 5; i > 0; i--) {
+        for (let j = 1; j <= 5; j++) {
+            if (j < i) {
+                document.write("&nbsp&nbsp");
+            } else {
+                document.write("*");
+            }
+        }
+        document.write("<br>");
+    }
+    document.write("<br>")
+    for (let i = 5; i > 0; i--) {
+        for (let j = 5; j >= 1; j--) {
+            if (j > i) {
+                document.write("&nbsp&nbsp");
+            } else {
+                document.write("*");
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

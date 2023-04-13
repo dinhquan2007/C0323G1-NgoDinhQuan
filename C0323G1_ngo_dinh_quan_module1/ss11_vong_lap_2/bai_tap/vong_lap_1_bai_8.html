@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game đoán số</title>
+</head>
+<body>
+<div>
+    <button type="button" onclick="playGame()">bắt đầu</button>
+</div>
+<script>
+    function playGame() {
+        let n = +prompt("nhập vào số lớn nhất của số đoán");
+        let n_ran = Math.floor(Math.random() * n);
+        let n_check = +prompt("nhập số bạn đoán");
+        let count = 1;
+        while (n_check !== n_ran) {
+            count++;
+            if (count === 4) {
+                alert("bạn hết số lần đoán");
+                alert("số cần đoán là" + n_ran);
+                break;
+            } else if (n_check < n_ran) {
+                alert("số bạn cần đoán lớn hơn");
+            } else {
+                alert("số bạn cần đoán nhỏ hơn");
+            }
+            n_check = +prompt("nhập lại số bạn đoán");
+        }
+        if (count < 4) {
+            document.write("bạn đã đoán đúng ");
+        }
+    }
+</script>
+</body>
+</html>

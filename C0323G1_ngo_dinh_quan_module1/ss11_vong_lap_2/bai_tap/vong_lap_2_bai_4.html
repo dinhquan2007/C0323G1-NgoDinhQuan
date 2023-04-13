@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in hình chữa nhật</title>
+</head>
+<body>
+<script>
+    let d = +prompt("nhập vào chiều ngang");
+    let r = +prompt("nhập vào chiều rộng");
+    for (let j = 1; j <= r; j++) {
+        if (j === 1 || j === r) {
+            for (let i = 1; i <= d; i++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        } else {
+            for (let i = 1; i <= d; i++) {
+                if (i === 1 || i === d) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp&nbsp");
+                }
+            }
+            document.write("<br>");
+        }
+    }
+
+
+</script>
+</body>
+</html>
