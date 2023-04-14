@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label>nhập vào từ muốn dịch<input type="text" id="word"></label>
+    <button type="button" onclick="getText()">dịch/sreach</button>
+    <div>
+        <p id="result">result</p>
+    </div>
+</form>
+<script>
+    function getText() {
+        let english = ["apple", "banana", "orage"];
+        let vietNamEse = ["táo", "chuối", "cam"];
+        let word = document.getElementById("word").value;
+        for (let i = 0; i < english.length; i++) {
+            if (word === english[i]) {
+                document.getElementById("result").innerText = word+" có nghĩa là "+ vietNamEse[i];
+                break;
+            } else {
+                document.getElementById("result").innerText = "từ bạn nhập không có trong từ điển";
+            }
+        }
+    }
+</script>
+</body>
+</html>
