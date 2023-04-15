@@ -11,21 +11,21 @@
 <script>
     function playGame() {
         let n = +prompt("nhập vào số lớn nhất của số đoán");
-        let n_ran = Math.floor(Math.random() * n);
-        let n_check = +prompt("nhập số bạn đoán");
+        let numberRandom = Math.floor(Math.random() * n);
+        let numberCheck = +prompt("nhập số bạn đoán");
         let count = 1;
-        while (n_check !== n_ran) {
+        while (numberCheck !== numberRandom) {
             count++;
             if (count === 4) {
                 alert("bạn hết số lần đoán");
-                alert("số cần đoán là" + n_ran);
+                alert("số cần đoán là" + numberRandom);
                 break;
-            } else if (n_check < n_ran) {
+            } else if (numberCheck < numberRandom) {
                 alert("số bạn cần đoán lớn hơn");
             } else {
                 alert("số bạn cần đoán nhỏ hơn");
             }
-            n_check = +prompt("nhập lại số bạn đoán");
+            numberCheck = +prompt("nhập lại số bạn đoán");
         }
         if (count < 4) {
             document.write("bạn đã đoán đúng ");
