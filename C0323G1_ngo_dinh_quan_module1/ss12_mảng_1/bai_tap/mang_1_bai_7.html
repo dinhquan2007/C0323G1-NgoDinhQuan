@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let i = 0;
+    while (i < 10) {
+        let number = +prompt("nhập vào số muốn đưa vào mảng");
+        if (number % 1 === 0) {
+            array.push(number);
+            i++
+        } else {
+            alert("nhập lại số nguyên");
+        }
+    }
+    let v = +prompt("nhập vào số bạn muốn kiểm tra");
+    let j = 0;
+    while (j < 10) {
+        if (v === array[j]) {
+            array.splice(j, 1);
+            document.write("số" + v + "có trong mảng" + "<br>");
+            document.write("mảng còn lại sau khi loại" + v + "là" + array);
+            break;
+        } else {
+            j++;
+        }
+    }
+    if (j === 10) {
+        document.write(v + "không có trong mảng");
+    }
+</script>
+</body>
+</html>
