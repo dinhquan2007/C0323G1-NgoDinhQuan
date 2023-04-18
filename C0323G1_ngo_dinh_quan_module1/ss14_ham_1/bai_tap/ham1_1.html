@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>goi ham message</title>
+</head>
+<body>
+<div>
+    <label>nhập vào tên của bạn<input type="text" id="name"></label><br>
+    <button onclick="alertMessage()">tiếp theo</button>
+</div>
+<script>
+    function alertMessage() {
+        let name = document.getElementById("name").value;
+        alert("xin chào " + name);
+    }
+</script>
+</body>
+</html>

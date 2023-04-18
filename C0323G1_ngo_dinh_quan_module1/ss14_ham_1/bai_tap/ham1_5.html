@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let starArray = ['Polaris', 'Aldebaran', ' Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let groupStar = [' Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', ' Ursa Major', 'Leo'];
+    let star = prompt("nhập vào sao muốn tìm");
+    findConstellation();
+
+    function findConstellation() {
+        let count = 0;
+        for (let j in starArray) {
+            if (star === starArray[j]) {
+                alert(groupStar[j]);
+            } else {
+                count++;
+            }
+        }
+        if (count === 7) {
+            alert("không có sao nào là " + star);
+        }
+    }
+</script>
+</body>
+</html>

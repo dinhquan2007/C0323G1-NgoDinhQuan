@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính chu vi và diện tích</title>
+</head>
+<body>
+<script>
+    let r=prompt("nhập vào bán kính");
+    const PI=3.14;
+    countPerimeter(r);
+    countAcreage(r);
+    function countPerimeter(r){
+        let p= 2*r*PI;
+        alert("chu vi là "+ p);
+    }
+    function countAcreage(r){
+        let s= r*r*PI;
+        alert("diện tích là "+s);
+    }
+</script>
+</body>
+</html>
