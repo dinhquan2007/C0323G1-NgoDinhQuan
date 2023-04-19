@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập độ dài mảng");
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let number = parseInt(prompt("nhập vào các phần tử"));
+        if (!isNaN(number)) {
+            arr.push(number);
+        } else {
+            number = parseInt(prompt("nhập lại phần tử số"));
+        }
+    }
+    alert(arr);
+    checkArray(arr);
+
+    function checkArray(array) {
+        let flag = true;
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] % i === 0) {
+                flag = true;
+            } else {
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            alert("OK");
+        } else {
+            alert("NO");
+        }
+    }
+
+</script>
+</body>
+</html>

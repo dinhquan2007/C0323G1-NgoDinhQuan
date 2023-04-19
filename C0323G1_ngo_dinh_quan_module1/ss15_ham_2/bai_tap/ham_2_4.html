@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("nhập vào 1 kí tự kiểm tra phải ký tự số không");
+    testNumber(str);
+
+    function testNumber(str) {
+        if (str.length === 1) {
+            if (str % 1 === 0) {
+                alert("đây là một kí tự số");
+            } else {
+                alert("đây không phải kí tự số");
+            }
+        } else {
+            alert("đây không phải một kí tự");
+        }
+    }
+</script>
+</body>
+</html>

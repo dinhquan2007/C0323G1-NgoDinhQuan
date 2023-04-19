@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Truyền mảng và đảo ngược mảng</title>
+</head>
+<body>
+<script>
+    let arrayA = [12, 55, 87, 2, 323, 12, 21];
+    splineArray(arrayA);
+    alert(arrayA);
+
+    function splineArray(array) {
+        for (let i = 0; i < (array.length / 2); i++) {
+           let t=array[i];
+               array[i]=array[array.length-1 - i];
+               array[array.length-1 - i]=t;
+        }
+    }
+</script>
+</body>
+</html>

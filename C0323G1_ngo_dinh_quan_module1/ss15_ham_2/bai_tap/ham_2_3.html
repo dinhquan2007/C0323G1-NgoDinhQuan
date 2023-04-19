@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính giai thừa</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập vào số cần tính giai thừa");
+    getFactorial(n);
+
+    function getFactorial(n) {
+        let result = 1;
+        for (let j = 2; j <= n; j++) {
+            result *= j;
+        }
+        alert(result);
+    }
+</script>
+</body>
+</html>

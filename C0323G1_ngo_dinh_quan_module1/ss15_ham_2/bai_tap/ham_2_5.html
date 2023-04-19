@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numberA = prompt("nhập vào số a");
+    let numberB = prompt("nhập vào số a");
+    let numberC = prompt("nhập vào số a");
+    checkNumber(numberA, numberB, numberC);
+
+    function checkNumber(a, b, c) {
+        if (testNumber(a) && testNumber(b) && testNumber(c)) {
+            if (a < b && a < c) {
+                alert("giá trị nhỏ nhất là :" + a);
+            } else if (b < c) {
+                alert("giá trị nhỏ nhất là : " + b);
+            } else {
+                alert("giá trị nhỏ nhất là : " + c);
+            }
+        } else {
+            alert("không phải số nguyên");
+        }
+    }
+
+    function testNumber(a) {
+        if (a % 1 === 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

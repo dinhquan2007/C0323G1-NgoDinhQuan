@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên dương</title>
+</head>
+<body>
+<script>
+    let number = +prompt("kiểm tra số nguyên dương");
+    testNumber(number);
+    function testNumber(a) {
+        if (a % 1 === 0) {
+            if (a < 0) {
+                alert("false");
+            } else {
+                alert("true");
+            }
+        } else {
+            alert("không phải số nguyên");
+        }
+    }
+</script>
+</body>
+</html>
