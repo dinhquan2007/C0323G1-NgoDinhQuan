@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayA = [];
+    let arrayB = [];
+    for (let i = 0; i < 20; i++) {
+        let str = prompt("nhập vào 10 phần tử mảng a và 10 phần tử mảng b");
+        if (i < 10) {
+            arrayA.push(str);
+        } else {
+            arrayB.push(str);
+        }
+    }
+    alert(arrayA.concat(arrayB));
+</script>
+</body>
+</html>
