@@ -5,6 +5,27 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let array = ['d', 's', '4', 2, 1, 5, 3, 6, 'a', 'b', 'c'];
+    let kyTu = 'f';
+   checkKyTu(kyTu);
+    function checkKyTu(n) {
+        let flag=true;
+        let count=0;
+        for (let i = 0; i < array.length; i++) {
+            if (n===array[i]){
+                flag=true;
+                count++;
+            }else {
+                flag=false;
+            }
+        }
+        if (flag){
+            alert(count);
+        }else {
+            alert(-1);
+        }
+    }
+</script>
 </body>
 </html>
