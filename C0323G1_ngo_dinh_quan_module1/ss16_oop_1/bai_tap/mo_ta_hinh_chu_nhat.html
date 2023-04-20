@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <label>nhập vào chiều rộng<input type="number" id="width">px</label><br/>
+    <label>nhập vào chiều dài<input type="number" id="height">px</label><br/>
+</div>
+<div>
+    <button onclick="perimeter()">tính chu vi</button>
+    <button onclick="area()">tính diện tích</button>
+</div>
+<div>
+    <p>chu vi là <label id="tinhChuVi"></label></p>
+    <p>diện tích là <label id="tinhDienTich"></label></p>
+</div>
+<div>
+    <button type="button" onclick="canvas()">vẽ</button>
+    <canvas id="canvas" width="500px" height="300px"></canvas>
+</div>
+
+</body>
+<script>
+
+    function perimeter() {
+        let w = +document.getElementById("width").value;
+        let h = +document.getElementById("height").value;
+        let tangle = new Rectangle(w, h)
+        document.getElementById("tinhChuVi").innerText = tangle.perimeter();
+    }
+
+    function area() {
+        let w = +document.getElementById("width").value;
+        let h = +document.getElementById("height").value;
+        let tangle = new Rectangle(w, h)
+        document.getElementById("tinhDienTich").innerText = tangle.area();
+    }
+
+    class Rectangle {
+        constructor(width, height) {
+            this.height = height;
+            this.width = width;
+        }
+
+        area() {
+            return this.height * this.width;
+        }
+
+        perimeter() {
+            return (this.height + this.width) * 2;
+        }
+    }
+
+    function canvas() {
+        let w = +document.getElementById("width").value;
+        let h = +document.getElementById("height").value;
+        let canvas = document.getElementById("canvas");
+        let ctx = canvas.getContext('2d');
+        ctx.lineWidth = "1";
+        ctx.strokeStyle = "red";
+        ctx.strokeRect(10, 10, h, w);
+    }
+
+
+</script>
+</html>

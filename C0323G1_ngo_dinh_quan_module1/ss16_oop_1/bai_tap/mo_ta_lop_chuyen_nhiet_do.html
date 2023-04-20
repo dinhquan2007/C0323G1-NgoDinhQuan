@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đồi nhiệt độ</title>
+</head>
+<div>
+    <label>nhập vào độ C<input type="number" id="celsius"></label>
+    <button onclick="chuyenDoi()">chuyển đổi</button>
+</div>
+<div>
+    <p>Nhiệt độ K: <label id="doK"></label></p>
+    <p>Nhiệt độ F: <label id="doF"></label></p>
+</div>
+<body>
+<script>
+    function chuyenDoi() {
+        let celsius = +document.getElementById("celsius").value;
+        let temperature = new Temperature(celsius);
+        document.getElementById("doK").innerText = temperature.kelvins();
+        document.getElementById("doF").innerText = temperature.fahrenheit();
+    }
+
+    class Temperature {
+        constructor(celsius) {
+            this.celsius = celsius;
+        }
+
+        fahrenheit() {
+            return (9 / 5 * this.celsius + 32);
+        }
+
+        kelvins() {
+            return (this.celsius + 273);
+        }
+    }
+
+</script>
+</body>
+</html>
