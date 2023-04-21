@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam và Eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor() {
+            this.weight = 10;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        decrease() {
+            if (this.isEmpty()){
+                alert("đã hết táo rồi")
+            }else {
+                return this.weight--;
+            }
+        }
+
+        isEmpty() {
+            if (this.weight<=0)
+          return true;
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        isMale() {
+            return this.gender;
+        }
+
+        setGender(boolean) {
+            return this.gender;
+        }
+
+        check(Aplle) {
+          Aplle.getWeight();
+        }
+
+        eat(Apple) {
+            if (Apple.getWeight()>0){
+                Apple.decrease();
+                return this.weight++;
+            }else {
+                alert("táo đã hết")
+            }
+        }
+
+        say(string) {
+            alert(string);
+        }
+
+        getName() {
+            return this.name;
+
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(){
+         return this.weight
+        }
+    }
+    let adam=new Human("adam","boy",65);
+    let eva=new Human("eva","girl",45);
+    let tao=new Apple();
+    adam.say("he sờ lô,hơ sờ ly ly");
+    eva.say("hello anh,sờ gì anh");
+    adam.say("à no săm thinh,em ăn khoai không");
+    eva.say("dạ không ạ,em có táo đây");
+    while (tao.isEmpty()!==true){
+        alert("adam ăn táo");
+        adam.eat(tao)
+        alert("Quả táo còn: "+tao.getWeight()+"miếng");
+        alert("cân nặng là"+adam.getWeight())
+        eva.eat(tao)
+        alert("Quả táo còn: "+tao.getWeight()+"miếng");
+        alert("cân nặng là"+eva.getWeight())
+    }
+</script>
+</body>
+</html>
