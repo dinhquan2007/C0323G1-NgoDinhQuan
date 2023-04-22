@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra binh phuong phan tu trong mang</title>
+</head>
+<body>
+<script>
+    function checkArray(arr) {
+        if (arr.length % 2 === 0) {
+            for (let i = 0; i < arr.length / 2; i++) {
+                if (arr[i] * arr[i] !== arr[arr.length / 2 + i]) {
+                    return false;
+                }
+            }
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    let arrayA = [1, 2, 3, 1, 4, 9];
+    checkArray(arrayA);
+    if (checkArray(arrayA)) {
+        alert("true");
+    } else {
+        alert("false");
+    }
+</script>
+</body>
+</html>
