@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính thuế thu nhập</title>
+</head>
+<body>
+<h1>Tính thuế thu nhập theo lương</h1>
+<div>
+    <label>nhập vào lương<input type="number" id="money"></label>
+    <button type="button" onclick="changeMoney()">tính thuế thu nhập</button>
+</div>
+<div>
+    <label>thuế thu nhập là:</label>
+    <label id="result1"></label><br>
+    <label>lương ròng là:</label>
+    <label id="result2"></label>
+</div>
+</body>
+<script>
+    function changeMoney() {
+        let money = +document.getElementById("money").value;
+        if (money < 7000000) {
+            document.getElementById("result1").innerHTML = money * 5 / 100;
+            document.getElementById("result2").innerHTML = money * 95 / 100;
+        } else if (money < 15000000) {
+            document.getElementById("result1").innerHTML = money * 10 / 100;
+            document.getElementById("result2").innerHTML = money * 90 / 100;
+        } else {
+            document.getElementById("result1").innerHTML = money * 20 / 100;
+            document.getElementById("result2").innerHTML = money * 80 / 100;
+        }
+    }
+</script>
+</html>

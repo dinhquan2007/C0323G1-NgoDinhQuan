@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let h=+prompt("nhập vào chiều cao của tam giác cân");
+    for (let i = 0; i < h; i++) {
+        for (let j = 0; j < 2*h; j++) {
+            if(h-i===j||j===h+i||i===h-1){
+                document.write("*");
+            }else {
+                document.write("&nbsp&nbsp");
+            }
+        }
+        document.write("<br>")
+    }
+</script>
+</body>
+</html>
