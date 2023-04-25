@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so sánh phân số</title>
+</head>
+<body>
+<script>
+    let arrayNumerators=[2,5,6,8,1,23,7];
+    let arrayDenominators=[2,6,7,5,21,5,8];
+    let max=arrayNumerators[0]/arrayDenominators[0];
+    let count=0;
+    for (let i in arrayNumerators) {
+        let n=arrayNumerators[i]/arrayDenominators[i];
+        if (n>max){
+            max=n;
+            count=i;
+        }
+    }
+    alert("phân số lớn nhất là "+arrayNumerators[count]+"/"+arrayDenominators[count]+"chỉ số là "+count)
+</script>
+</body>
+</html>

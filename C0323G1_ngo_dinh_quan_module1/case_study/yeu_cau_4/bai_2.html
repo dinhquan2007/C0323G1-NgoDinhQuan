@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string="cabca";
+    let arrayA=[];
+    for (let i in string) {
+        if (!arrayA.includes(string[i])){
+            arrayA.push(string[i]);
+        }
+    }
+    alert("chuỗi có "+arrayA.length+" ký tự khác nhau là: "+arrayA);
+</script>
+</body>
+</html>
