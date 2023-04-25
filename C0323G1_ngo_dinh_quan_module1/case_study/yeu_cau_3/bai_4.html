@@ -10,7 +10,7 @@
     let arrayList = [0, 'cafe', 'Cam vắt', 'Nước ép cà rốt', 'Nước ép cà chua', 'nước lọc', 'nước dừa'];
     let arrayMoney = [0, 15, 20, 25, 25, 10, 30];
     let sum = 0;
-    let flag=true;
+    let flag = true;
     do {
         let choose = parseInt(prompt('1.cafe\n' +
             '2.Cam vắt\n' +
@@ -22,11 +22,11 @@
         if (0 < choose && choose < 7) {
             let n = +prompt("giá tiền của " + arrayList[choose] + " là : " + arrayMoney[choose] + 'vui lòng chọn số lượng');
             sum += n * arrayMoney[choose];
-        }else {
-            flag=false;
+        } else {
+            flag = false;
             break;
         }
-    }while (flag);
-    alert("số tiền phải trả là : "+sum+"k");
+    } while (flag);
+    alert("số tiền phải trả là : " + sum + "k");
 </script>
 </html>

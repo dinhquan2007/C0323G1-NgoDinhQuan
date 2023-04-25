@@ -6,18 +6,18 @@
 </head>
 <body>
 <script>
-    let arrayA=[1,2,3,4,5,6,9,0];
-    let arrayB=[0,2,4,45,7,86,5,8];
-    let arrayC=[];
+    let arrayA = [1, 2, 3, 4, 5, 6, 9, 0];
+    let arrayB = [0, 2, 4, 45, 7, 86, 5, 8];
+    let arrayC = [];
     for (let i = 0; i < arrayB.length; i++) {
-        let flag=true;
+        let flag = true;
         for (let j = 0; j < arrayA.length; j++) {
-            if (arrayA[j]===arrayB[i]){
-                flag=false;
+            if (arrayA[j] === arrayB[i]) {
+                flag = false;
                 break;
             }
         }
-        if (flag&&!arrayC.includes(arrayB[i])){
+        if (flag && !arrayC.includes(arrayB[i])) {
             alert(arrayB[i]);
             arrayC.push(arrayB[i]);
         }

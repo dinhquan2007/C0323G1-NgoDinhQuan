@@ -6,16 +6,16 @@
 </head>
 <body>
 <script>
-    let h=+prompt("nhập vào chiều cao của tam giác cân");
+    let h = +prompt("nhập vào chiều cao của tam giác cân");
     for (let i = 0; i < h; i++) {
-        for (let j = 0; j < 2*h; j++) {
-            if(h-i>j||j>h+i){
+        for (let j = 0; j < 2 * h; j++) {
+            if (h - i > j || j > h + i) {
                 document.write("&nbsp&nbsp");
-            }else {
+            } else {
                 document.write("*");
             }
         }
-        document.write("<br>")
+        document.write("<br>");
     }
 </script>
 </body>
