@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let flag = true;
+    let m = +prompt("nhập chiều dài ma trận");
+    let n = +prompt("nhập chiều cao ma trận");
+    while (flag) {
+        if (!isNaN(n) || !isNaN(m)) {
+            flag = false;
+            break;
+        } else {
+            m = +prompt("nhập chiều dài ma trận");
+            n = +prompt("nhập chiều cao ma trận");
+        }
+    }
+    let array = [];
+    for (let i = 0; i < m; i++) {
+        let arr = [];
+        for (let j = 0; j < n; j++) {
+            arr[j] = +prompt("nhập vào các phần tử");
+        }
+        array[i] = arr;
+    }
+    let sum = 0;
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            if (array[i][j] % 2 === 0) {
+                sum += array[i][j];
+            }
+        }
+    }
+    console.log(array);
+    alert("tổng các số chẵn có trong mảng là : " + sum);
+
+</script>
+</body>
+</html>

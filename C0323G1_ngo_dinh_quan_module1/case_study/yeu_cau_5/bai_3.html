@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayA = [[2, 3, 1, 6, 4], [4, 4, 8, 5, 9], [5, 8, 4, 3, 9]];
+    let max = arrayA[0][0];
+    let min = arrayA[0][1];
+    for (let i in arrayA) {
+        for (let j in arrayA[i]) {
+            if (arrayA[i][j] > max) {
+                max = arrayA[i][j];
+            }
+            if (arrayA[i][j] < min) {
+                min = arrayA[i][j];
+            }
+        }
+    }
+    alert("min is " + min);
+    alert("max is " + max);
+</script>
+</body>
+</html>

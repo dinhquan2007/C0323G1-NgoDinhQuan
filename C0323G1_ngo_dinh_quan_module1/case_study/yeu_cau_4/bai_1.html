@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xâu kí tự</title>
+</head>
+<body>
+<script>
+    let string = "ngÔ  DiNh  QuÂn";
+    standardize(string);
+
+    function standardize(str) {
+        let arrayResult = [];
+        let array = str.split(" ");
+        for (let i in array) {
+            if (array[i] !== "") {
+                let arr = array[i].split("");
+                arrayResult.push(upToCase(arr));
+            }
+        }
+        alert(arrayResult.join(" "));
+    }
+
+    function upToCase(array) {
+        console.log(array);
+        let arrayNew = [];
+        for (let j = 0; j < array.length; j++) {
+            if (j === 0) {
+                let x = array[j].toUpperCase();
+                arrayNew.push(x);
+            } else {
+                let y = array[j].toLowerCase();
+                arrayNew.push(y);
+            }
+        }
+        return arrayNew.join("");
+    }
+
+</script>
+</body>
+</html>
