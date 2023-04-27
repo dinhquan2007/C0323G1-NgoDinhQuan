@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hệ thống quản lí học viên</title>
+</head>
+<body>
+<form>
+    <div>
+        <button type="button" onclick="createStudent()">Thêm mới học viên</button>
+        <button type="button" onclick="editStudent()">Sửa thông tin học viên</button>
+        <button type="button" onclick="deleteStudent()">Xóa học viên</button>
+    </div>
+    <div id="table"></div>
+</form>
+
+<script>
+    class Student {
+        constructor(id, name, group, email, birth) {
+            this.id = id;
+            this.name = name;
+            this.group = group;
+            this.email = email;
+            this.birth = birth;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getGroup() {
+            return this.group;
+        }
+
+        setGroup(group) {
+            this.group = group;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+
+        setEmail(email) {
+            this.email = email;
+        }
+
+        getBirth() {
+            return this.birth;
+        }
+
+        setBirth(birth) {
+            this.birth = birth;
+        }
+    }
+
+    let nguyenVanA = new Student("001", "nguyễn văn a", "9A", "nguyenvana@gmail.com", "22/11/2010");
+    let nguyenVanB = new Student("002", "nguyễn văn b", "9A", "nguyenvanb@gmail.com", "23/11/2010");
+    let nguyenVanC = new Student("003", "nguyễn văn c", "9A", "nguyenvanc@gmail.com", "24/11/2010");
+    let arrayStudent = [nguyenVanA, nguyenVanB, nguyenVanC];
+    display();
+
+    function display() {
+        let table = "<table style='border-collapse: collapse'>" +
+            "<tr style='border: 1px solid gray'>" +
+            "<th style='border: 1px solid grey'>Mã học viên</th>" +
+            "<th style='border: 1px solid grey'>Tên</th>" +
+            "<th style='border: 1px solid grey'>Lớp</th>" +
+            "<th style='border: 1px solid grey'>Email</th>" +
+            "<th style='border: 1px solid grey'>Ngày sinh</th>" +
+            "</tr>"
+        for (let i = 0; i < arrayStudent.length; i++) {
+            table += "<tr style='border: 1px solid grey'>" +
+                "<td style='border: 1px solid grey'>" + arrayStudent[i].getId() + "</td>" +
+                "<td style='border: 1px solid grey'>" + arrayStudent[i].getName() + "</td>" +
+                "<td style='border: 1px solid grey'>" + arrayStudent[i].getGroup() + "</td>" +
+                "<td style='border: 1px solid grey'>" + arrayStudent[i].getEmail() + "</td>" +
+                "<td style='border: 1px solid grey'>" + arrayStudent[i].getBirth() + "</td>" +
+                "</tr>"
+        }
+        table += "</table>";
+        document.getElementById("table").innerHTML = table;
+    }
+
+    function createStudent() {
+        let id = prompt("nhập vào mã học viên");
+        let name = prompt("nhập vào tên học viên");
+        let group = prompt("nhập vào lớp của học viên");
+        let email = prompt("nhập vào email của học viên");
+        let birth = prompt("nhập vào ngày sinh học viên");
+        let newStudent = new Student(id, name, group, email, birth);
+        arrayStudent.push(newStudent);
+        display()
+    }
+
+    function editStudent() {
+        let id = prompt("nhập mã học viên bạn muốn sửa");
+        for (let i in arrayStudent) {
+            if (id === arrayStudent[i].getId()) {
+                let editId = prompt("nhập vào mã học sinh");
+                let editName = prompt("nhập vào tên");
+                let editGroup = prompt("nhập vào lớp");
+                let editEmail = prompt("nhập vào email");
+                let editBirth = prompt("nhập vào ngày sinh");
+                arrayStudent[i].setId(editId);
+                arrayStudent[i].setName(editName);
+                arrayStudent[i].setGroup(editGroup);
+                arrayStudent[i].setEmail(editEmail);
+                arrayStudent[i].setBirth(editBirth);
+            }
+        }
+        display();
+    }
+
+    function deleteStudent() {
+        let id = prompt("nhập vào id học viên bạn muốn xóa");
+        for (let i = 0; i < arrayStudent.length; i++) {
+            if (id === arrayStudent[i].getId()) {
+                arrayStudent.splice(i, 1);
+            }
+        }
+        display();
+    }
+</script>
+</body>
+</html>
