@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string="Hello World";
+    let vowel=["U","E","O","A","I","u","e","o","a","i"]
+    checkString(string);
+    function checkString(str){
+        let arrayVowel=[];
+        for (let i = 0; i < str.length; i++) {
+            if (vowel.includes(str[i])){
+                arrayVowel.push(str[i]);
+            }
+        }
+        alert(arrayVowel);
+    }
+
+</script>
+</body>
+</html>

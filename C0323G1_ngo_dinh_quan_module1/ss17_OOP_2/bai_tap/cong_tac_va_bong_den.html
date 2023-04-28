@@ -7,27 +7,28 @@
 <body>
 <script>
 
-    class ElectricLamp{
+    class ElectricLamp {
         constructor(status) {
             this.status = status;
         }
-        getStatus(){
+
+        getStatus() {
             return this.status;
         }
     }
 
-    class SwitchButton{
+    class SwitchButton {
         constructor(lamp, status) {
             this.status = status;
             this.lamp = lamp;
         }
 
-        switchOff(){
+        switchOff() {
             this.lamp.status = false;
             return this.status = false;
         }
 
-        switchOn(){
+        switchOn() {
             this.lamp.status = true;
             return this.status = true;
         }
@@ -35,7 +36,7 @@
 
     let electricLamp = new ElectricLamp(false);
 
-    let switchButton = new SwitchButton(electricLamp,false);
+    let switchButton = new SwitchButton(electricLamp, false);
 
     document.write('<strong>Bật Tắt Công Tắc 10 lần</strong>');
     for (let i = 0; i < 5; i++) {

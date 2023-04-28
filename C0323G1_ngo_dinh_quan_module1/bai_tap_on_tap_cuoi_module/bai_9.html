@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xét trung bình của mảng</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập vào độ dài mảng là số nguyên dương");
+    let flag = true;
+    while (flag) {
+        if (isNaN(n) || n < 0) {
+            n = +prompt("nhập vào độ dài là số nguyên dương");
+        } else {
+            flag = false;
+            break;
+        }
+    }
+    let arrayNumber = [];
+    let a = 0;
+    while (a < n) {
+        let number = +prompt("nhập vào các phần tử số nguyên");
+        if (!isNaN(number)) {
+            arrayNumber.push(number);
+            a++
+        } else {
+            number = +prompt("phải là số nguyên");
+        }
+
+    }
+    alert(arrayNumber);
+    let sum=0;
+    for (let i in arrayNumber) {
+        if (arrayNumber[i] > max) {
+            sum += arrayNumber[i];
+        }
+    }
+    let avg=sum/arrayNumber.length;
+    let count=0;
+    for (let j in avg) {
+        if (avg[i]===avg){
+            count++;
+        }
+    }
+    alert("số lượng bằng với số trung bình trong chuỗi là :"+count)
+</script>
+</body>
+</html>

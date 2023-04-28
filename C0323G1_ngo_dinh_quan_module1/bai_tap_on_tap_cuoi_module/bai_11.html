@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xét kí tự đặc biệt</title>
+</head>
+<body>
+<script>
+    let string = prompt("nhập vào chuỗi ");
+    let arrayAlphabet = "abcdefghijklmnopqwvurstxyz"
+
+    function checkString(str) {
+        let arrayNew = [];
+        for (let i in str) {
+            if (isNaN(str[i]) && !arrayAlphabet.includes(str[i].toLowerCase())) {
+                arrayNew.push(str[i]);
+            }
+        }
+        return arrayNew;
+    }
+
+    console.log(checkString(string));
+</script>
+</body>
+</html>

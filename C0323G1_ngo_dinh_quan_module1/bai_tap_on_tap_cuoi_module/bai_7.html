@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập vào chiều dài mảng ");
+    while (isNaN(n) || n < 0) {
+        n = +prompt("nhập vào chiều dài mảng là số nguyên dương ");
+    }
+    let arrayNumber = [];
+    let i = 0;
+    while (i < n) {
+        let a = +prompt("nhập vào các phần tử số nguyên từ 10 đến 100");
+        if (!isNaN(a) && a > 10 && a < 100) {
+            arrayNumber.push(a);
+            i++;
+        } else {
+            a = +prompt("nhập vào các phần tử là số nguyên");
+        }
+    }
+    alert(arrayNumber);
+    checkArray(arrayNumber)
+
+    function checkArray(arr) {
+        let arrayNew = [];
+        for (let j = 0; j < arr.length; j++) {
+            arr[j] = arr[j].toString();
+            if (arr[j][0] > arr[j][1]) {
+                arrayNew.push(arr[j]);
+            }
+        }
+        alert(arrayNew);
+    }
+</script>
+</body>
+</html>

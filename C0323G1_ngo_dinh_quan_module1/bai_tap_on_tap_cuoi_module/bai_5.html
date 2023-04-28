@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n= prompt("nhập vào số phần tử của mảng là số chẵn");
+    let arrayNumber=[];
+    function checkNumber(n){
+        if(n%2!==0){
+            alert("false");
+            return false;
+        }else {
+            return true;
+        }
+    }
+    if (checkNumber(n)){
+        for (let i = 0; i < n; i++) {
+            arrayNumber.push(+prompt("nhập vào các phần tử số của mảng"));
+        }
+    }
+    function checkArray(arr) {
+        for (let i = 0; i < arr.length; i+2) {
+            if(arr[i]>=arr[i+1]){
+                return false;
+            }
+        }
+        return true;
+    }
+    alert(arrayNumber);
+
+    if (checkArray(arrayNumber)){
+        alert("true");
+    }else {
+        alert("false");
+    }
+</script>
+</body>
+</html>

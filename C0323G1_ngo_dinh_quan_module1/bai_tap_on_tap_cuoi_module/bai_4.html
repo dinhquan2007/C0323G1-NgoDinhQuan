@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    let string = "Hello World";
+
+    function checkString(str) {
+        let count1 = 0;
+        let count2 = 0;
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] === str[i].toUpperCase()) {
+                count1++;
+            }
+            if (str[i] === str[i].toLowerCase()) {
+                count2++;
+            }
+        }
+        if (count1 === count2) {
+            alert("true");
+        } else {
+            alert("false");
+        }
+    }
+
+    checkString(string);
+</script>
+</body>
+</html>

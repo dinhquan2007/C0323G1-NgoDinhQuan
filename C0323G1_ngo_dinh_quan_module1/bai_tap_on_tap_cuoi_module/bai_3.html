@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xet mang theo thu tu tang hoac giam</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhập vào độ dài mảng"));
+    let arrayNumber = [];
+    let i = 0;
+    while (isNaN(n)) {
+        n = parseInt(prompt("nhập lại là số nguyên dương"));
+    }
+    while (i < n) {
+        let a = parseInt(prompt("nhập vào các phần tử"));
+        if (!isNaN(a)) {
+            arrayNumber.push(a);
+            i++;
+        } else {
+            a = parseInt(prompt("nhập vào các phần tử"));
+        }
+    }
+    alert(arrayNumber);
+
+    function checkArray(arr) {
+        if (arr[0] < arr[1]) {
+            for (let j = 1; j <arr.length ; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    return false;
+                }
+            }
+        } else {
+            for (let j = 1; j <arr.length; j++) {
+                if (arr[j] < arr[j + 1]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    checkArray(arrayNumber);
+    if (checkArray(arrayNumber)) {
+        alert("OK");
+    } else {
+        alert("NO");
+    }
+</script>
+</body>
+</html>

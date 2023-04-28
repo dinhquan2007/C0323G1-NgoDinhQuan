@@ -22,7 +22,7 @@
     let arrayA = [[2, 3, 1, 6, 4], [4, 4, 8, 5, 9], [5, 8, 4, 3, 9]];
     for (let i in arrayA) {
         for (let j in arrayA[i]) {
-            if (isPrime(arrayA[i][j]) && !arrayPrime.includes(arrayA[i][j])) {
+            if (isPrime(arrayA[i][j])) {
                 arrayPrime.push(arrayA[i][j]);
             }
         }

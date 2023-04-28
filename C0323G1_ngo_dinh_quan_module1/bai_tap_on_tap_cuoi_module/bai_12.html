@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xét dịnh dạng ngày tháng năm</title>
+</head>
+<body>
+<script>
+    let string = prompt("nhập vào định dạng ngày tháng năm với /");
+
+    function checkDate(str) {
+        alert( str.indexOf("/"));
+        let arrDate = str.split("/");
+        if (arrDate.length !== 3 ) {
+            return false;
+        } else {
+            for (let i in arrDate) {
+                if (isNaN(arrDate[i])) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    if (checkDate(string)) {
+        alert("true");
+    } else {
+        alert("false");
+    }
+
+</script>
+</body>
+</html>

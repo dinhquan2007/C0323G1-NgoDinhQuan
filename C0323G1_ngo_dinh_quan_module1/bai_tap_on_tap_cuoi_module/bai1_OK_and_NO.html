@@ -29,12 +29,25 @@
             array.push(parseInt(prompt("nhập vào các phần tử")));
         }
         alert(array);
-        if (n % 2 === 0) {
+    }
+    let count1=0;
+    let count2=0;
+    function checkEvenAndOld(arr){
+        for (let i = 0; i < arr.length; i++) {
+            if(arr[i]%2===0){
+                count1++;
+            }
+            if (arr[i]%2===1){
+                count2++;
+            }
+        }
+        if (count1===count2){
             alert("OK");
-        } else {
-            alert("NO")
+        }else {
+            alert("NO");
         }
     }
+    checkEvenAndOld(array);
 
 
 </script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra số chính phương</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập độ dài mảng");
+    while (isNaN(n) || n <= 0) {
+        n = +prompt("nhập dộ dài là số nguyên dương");
+    }
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        array.push(parseInt(prompt("nhập vào các phần tử số")));
+    }
+
+    function isSquare(number) {
+        for (let i = 0; i < number; i++) {
+            if (i * i === number) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    let arraySquare = [];
+    for (let i in array) {
+        if (isSquare(array[i])) {
+            arraySquare.push(array[i]);
+        }
+    }
+    alert("có " +arraySquare.length+" số chính phương là : "+arraySquare);
+</script>
+</body>
+</html>
